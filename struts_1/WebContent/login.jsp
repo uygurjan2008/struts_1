@@ -8,7 +8,14 @@
 </head>
 <body>
 
-suc
+<form action="login">
+username <input type="text" name="username" />
+userpass <input type="password" name="userpass" />
+
+<input type="submit" />
+
+</form>
+
 
 </body>
 </html>

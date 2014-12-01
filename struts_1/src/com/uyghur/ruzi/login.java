@@ -1,5 +1,7 @@
 package com.uyghur.ruzi;
 
+import com.uyghur.dao.userDAO;
+
 public class login {
 
 	private String username;
@@ -22,7 +24,12 @@ public class login {
 	}
 
 	public String execute() {
-		if (username.equals("username") && userpass.equals("userpass")) {
+		userDAO u=new userDAO();
+		boolean user=u.getConection(username, userpass);
+		System.out.println("user"+user);
+		
+		if (user==true) {
+			
 			return "success";
 
 		} else {

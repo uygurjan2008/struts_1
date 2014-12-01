@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-session
+<%
+String user=request.getParameter("username");
+session.setAttribute("user", user);
+System.out.print("a "+user);
+response.sendRedirect("index.jsp");
+%>
 </body>
 </html>

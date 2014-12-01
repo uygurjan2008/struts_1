@@ -7,20 +7,37 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="login">
-username <input type="text" name="username" />
-userpass <input type="password" name="userpass" />
+<%
+String user=(String)session.getAttribute("user");
+System.out.print(user);
 
-<input type="submit" />
+if(user!=null){
+	%>
+	
+	
 
-</form>
+<div align="center">
+<div>
+<label for="">username=<%=user %>
+</label>
+</div>
+<div align="center" style="border: 1px solid;box-shadow:0 0 0 2px #000;width:70%;height:750px;">
 
-<form action="error">
+</div>
+</div>
+	
+	
+	<%
+	
+}else{
+	
+	
+	response.sendRedirect("login.jsp");
+	
+	
+}
 
-<input type="submit" value="submiterror"/>
-
-</form>
-
+%>
 
 </body>
 </html>
