@@ -1,6 +1,5 @@
 <%@page import="java.util.Map"%>
 <%@page import="java.util.List"%>
-<%@page import="java.util.list"%>
 <%@page import="com.uyghur.dao.goods_in"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
