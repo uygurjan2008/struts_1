@@ -28,6 +28,12 @@
 
 		</action>
 		
+		<action name="goods_in" class="com.uyghur.dao.goods_in">
+
+			<result name="true">goods_in.jsp</result>
+			<result name="false">error.jsp</result>
+
+		</action>
 		
 		
 
