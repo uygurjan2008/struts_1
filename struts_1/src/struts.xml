@@ -22,7 +22,7 @@
 		<action name="login" class="com.uyghur.ruzi.login">
 
 			<result name="success">success.jsp</result>
-			<result type="redirect">session?username=${username}&userpass=${userpass}</result>
+			<result type="redirect">session?username=${username}username=${username}</result>
 			<result name="fail">error.jsp</result>
 
 		</action>
