@@ -2,6 +2,10 @@ package com.uyghur.dao;
 
 import java.sql.*;
 
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
 public class userDAO {
 	private String username;
 	private String useruserpass;
@@ -46,6 +50,13 @@ public class userDAO {
 			if(rs.next())
 			{
 				exist=true; 
+				
+				HttpSession session=ServletActionContext.getRequest().getSession();
+				session.setAttribute("user", username);
+				
+				
+				
+				
 			}
 			else
 			{

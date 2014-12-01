@@ -1,5 +1,9 @@
+<%@page import="com.uyghur.ruzi.goods"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+	pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -193,18 +197,19 @@ input {
 																			.log(
 																					"first one",
 																					nn);
-																	var s=confirm("已经是第一个了，是否关闭？");
-																	
-																	if(s==true){
-																		
-																	
-																	$(".win .loginform")
-																			.find(
-																					"div")
-																			.remove();
-																	$(".win")
-																			.hide();
-																}
+																	var s = confirm("已经是第一个了，是否关闭？");
+
+																	if (s == true) {
+
+																		$(
+																				".win .loginform")
+																				.find(
+																						"div")
+																				.remove();
+																		$(
+																				".win")
+																				.hide();
+																	}
 
 																}
 
@@ -248,30 +253,30 @@ input {
 																		.log(
 																				nn,
 																				src.length);
-																
-																
-																if (nn>=src.length-1) {
-																	
+
+																if (nn >= src.length - 1) {
+
 																	console
 																			.log(
 																					"last one",
 																					src[nn],
 																					nn);
-																	
-																	var s=confirm("都看完了，预览关闭");
-																	if(s==true){
-																		
-																	
-																	$(".win .loginform")
-																			.find(
-																					"div")
-																			.remove();
-																	$(".win")
-																			.hide();
+
+																	var s = confirm("都看完了，预览关闭");
+																	if (s == true) {
+
+																		$(
+																				".win .loginform")
+																				.find(
+																						"div")
+																				.remove();
+																		$(
+																				".win")
+																				.hide();
+																	}
+
 																}
 
-																	}
-																	
 																//console.log(src[nn]);
 
 																e
@@ -324,18 +329,16 @@ input {
 
 															});
 
-											$(".centerimg")
-													.mouseenter(
-															function() {
-																console
-																		.log("in");
-																var div = $(".win")
+											$(".centerimg").mouseenter(
+													function() {
+														console.log("in");
+														var div = $(".win")
 
-																//var close = div
-																	//	.prepend("<div ><label class='close' style='border: 1px solid;"
+														//var close = div
+														//	.prepend("<div ><label class='close' style='border: 1px solid;"
 																//+"border-radius: 50px'>close");
 
-															});
+													});
 											$(".centerimg").mouseout(
 													function() {
 														console.log("out");
@@ -379,67 +382,87 @@ input {
 
 					});
 </script>
+
+
+<s:i18n name="message_uy">
+		<title><s:text name="username"></s:text></title>
+</s:i18n>
+	
+
 </head>
 
 <body>
-<%
-String user=(String)session.getAttribute("user");
-System.out.print(user);
-
-if(user!=null){
-	%>
-	
-	
-
-<div align="center">
-<div>
-<label for="">username=<%=user %>
-</label>
-</div>
-<div>
-		<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
-		<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
-	</div>
-	<div align="center" id="win" class="win">
-		<div align="center" class="loginform"></div>
-	</div>
-
-</div>
-	
-	
 	<%
-	
-}else{
-	
-	
-	response.sendRedirect("login.jsp");
-	
-	
-}
+		String user = (String) session.getAttribute("user");
+		System.out.print(user);
 
-%>
+		if (user != null) {
+	%>
+
+
+
+	<div align="center">
+		<div>
+			<label for="">username=<%=user%>
+			</label>
+		</div>
+		<div>
+			<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/1.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/2.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/3.jpg" alt="" width="250" height="200" />
+			<img class="img1" src="img/4.jpg" alt="" width="250" height="200" />
+		</div>
+		<div align="center" id="win" class="win">
+			<div align="center" class="loginform"></div>
+		</div>
+
+	</div>
+
+	<div>data base
+	
+	<s:i18n name="message_uy">
+	 <s:label key="username"></s:label><s:textfield name="username"></s:textfield> <br />
+	 <s:label key="userpass"></s:label><s:password name="userpass"></s:password> <br />
+	</s:i18n>
+	s<s:property value="username"></s:property>
+	 
+
+
+	
+	</div>
+
+
+	<%
+	goods g=new goods();
+	g.read();
+	
+	
+		} else {
+
+			response.sendRedirect("login.jsp");
+
+		}
+	%>
 
 </body>
 </html>
