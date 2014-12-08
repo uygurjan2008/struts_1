@@ -1,6 +1,6 @@
-package com.uyghur.ruzi;
+package com.uyghur.ruzi.action;
 
-import com.uyghur.dao.userDAO;
+import com.uyghur.ruzi.dao.userDAO;
 
 public class login {
 

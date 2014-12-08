@@ -1,4 +1,4 @@
-package com.uyghur.ruzi;
+package com.uyghur.ruzi.action;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

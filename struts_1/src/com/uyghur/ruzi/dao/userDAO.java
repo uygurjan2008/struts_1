@@ -1,4 +1,4 @@
-package com.uyghur.dao;
+package com.uyghur.ruzi.dao;
 
 import java.sql.*;
 
