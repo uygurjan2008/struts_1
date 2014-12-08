@@ -88,7 +88,7 @@ input {
 															$(this).find(
 																	".img1").context.outerHTML);
 											 */
-											var src = $(this).find(".img1").context.currentSrc;
+											var src = $(this).attr("src");
 
 											console.log(src, $(this).find(
 													".img1"), $(this).index());

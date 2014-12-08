@@ -88,8 +88,9 @@ input {
 															$(this).find(
 																	".img1").context.outerHTML);
 											 */
-											var src = $(this).find(".img1").context.currentSrc;
-
+										//	var src = $(this).find(".img1").context.currentSrc;
+												var src = $(this).attr("src");
+													
 											console.log(src, $(this).find(
 													".img1"), $(this).index());
 
@@ -433,18 +434,6 @@ input {
 
 	</div>
 
-	<div>data base
-	
-	<s:i18n name="message_uy">
-	 <s:label key="username"></s:label><s:textfield name="username"></s:textfield> <br />
-	 <s:label key="userpass"></s:label><s:password name="userpass"></s:password> <br />
-	</s:i18n>
-	s<s:property value="username"></s:property>
-	 
-
-
-	
-	</div>
 
 
 </body>

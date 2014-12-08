@@ -21,7 +21,7 @@
 
 		<%
 			goods_in gi = new goods_in();
-		 Map<String,Object> map=gi.read();
+		 Map<String,String> map=gi.read();
 			
 		 System.out.println(map.get("name"));
 		%>
