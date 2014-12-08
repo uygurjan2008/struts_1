@@ -1,5 +1,9 @@
 package com.uyghur.ruzi.action;
 
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.uyghur.ruzi.dao.userDAO;
 
 public class adminlogin {
@@ -30,10 +34,15 @@ public class adminlogin {
 		
 		if (user==true) {
 			
+			HttpSession session=ServletActionContext.getRequest().getSession();
+			session.setAttribute("admin", username);
+			
 			return "success";
 
 		} else {
+			
 			return "fail";
+			
 		}
 
 	}

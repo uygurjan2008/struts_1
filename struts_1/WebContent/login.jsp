@@ -63,10 +63,14 @@ a {
 	}
 
 	function closewin() {
-		this.window.close();
-		console.log("close");
-		var b = document.getElementById("win");
-		b.style.display = "none";
+		//this.window.close();
+		console.log("reset");
+		var a = document.getElementById("username");
+		var b = document.getElementById("userpass");
+		a.value="";
+		b.value="";
+			
+
 	}
 
 	$(document).ready(function() {
@@ -83,7 +87,7 @@ a {
 				async : false,
 				data : data,
 				success : function(data) {
-
+					console.log(data);
 					window.location.replace("index.jsp");
 				}
 
@@ -113,7 +117,7 @@ a {
 					<label for="">pass word</label> <input class="input-lg"
 						type="password" name="userpass" id="userpass" />
 				<div style="margin-top: 20px;">
-					<a class="btn close1" onclick="closewin()">close</a> <a
+					<a class="btn close1" onclick="closewin()">reset</a> <a
 						class="btn btn-lg submit">submit</a>
 				</div>
 			</form>

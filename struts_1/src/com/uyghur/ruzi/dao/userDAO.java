@@ -30,7 +30,7 @@ public class userDAO {
 
 	public boolean getConection(String username, String userpass) {
 	
-		String sql="select * from dbusers where username='"+username+"' and userpass='"+userpass+"'";
+		String sql="select * from user where username='"+username+"' and userpass='"+userpass+"'";
 		
 		Dbdriver db=new Dbdriver();
 		

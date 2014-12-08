@@ -1,24 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8" isErrorPage="true"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet" href="css/bootstrap-3.2.0/dist/css/bootstrap.min.css" />
-<style type="text/css">
-
-
-</style>
-
+<title>Insert title here</title>
 </head>
 <body>
-
-<div align="center">
-<div align="center" style="background:#eee;">
-	<label for="" class="label-default">error</label>
-	<a href="index.jsp" class="bg-warning">return</a>
-</div>
-</div>
-
+	<div align="center" style="margin:10%; ">
+		<div align="center">
+			<font color="red" size="12">ERROR</font> <a href="login.jsp">return
+				to login</a>
+		</div>
+	</div>
 </body>
 </html>

@@ -24,26 +24,25 @@
 		<action name="login" class="com.uyghur.ruzi.action.login">
 
 			<result name="success" type="redirect">index.jsp</result>
-			<result name="fail">error.jsp</result>
+			<result name="fail">login.jsp</result>
+
+		</action>
+	
+		<action name="locale" class="com.uyghur.ruzi.action.language">
+
+			<result name="zh_CN">
+				
+			</result>
+			<result name="ug_CN">
+
+			</result>
 
 		</action>
 		
-		<action name="goods_in" class="com.uyghur.ruzi.dao.goods_in">
-
-			<result name="true">goods_in.jsp</result>
-			<result name="false">error.jsp</result>
-
-		</action>
-		
-		
-
-
-
-
-
+				
 
 	</package>
 	
 	<include file="admin.xml"></include>
-
+	
 </struts>
